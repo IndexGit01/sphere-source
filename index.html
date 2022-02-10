@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<title>SphereSource</title>
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="SphereSource Public Alpha" />
+	<meta property="og:description" content="Try out SphereSource, a new multiplayer game created by UltraDEVS!" />
+	<meta property="og:url" content="http://spheresource.tk/" />
+	<meta property="og:image" content="/static/textures/player.png" />
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+	</script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js">
+	</script>
+	<link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+	<script src="/socket.io/socket.io.js">
+	</script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="/static/joy.min.js"></script>
+</head>
+
+<body>
+	<img id="player" style="display:none;"
+src="/static/textures/player.png" alt="player.png">
+<audio id="lobbyMusic" autoplay loop>
+     <source src="/static/sounds/login.mp3" type="audio/mpeg"/>
+</audio>
+<audio id="gameMusic" autoplay loop>
+     <source src="/static/sounds/game.mp3" type="audio/mpeg"/>
+</audio>
+
+  <div class ="discordSide">
+    
+  </div>
+    <div class="ui" id="ui">
+      <h2>SphereSource</h2><br>
+      <h3>Public Alpha</h3><br>
+      <h4>Username:</h4>
+      <input maxlength="15" type="text" id='username'><br>
+      <p id="error"></p>
+      <button id="playButton">Play</button>
+      <div class="controls">
+      <button id="annButton"><i class="fa fa-bullhorn" style=" vertical-align: middle;"></i> </button>
+      <button id="logButton"><i class="fa fa-bars" style=" vertical-align: middle;"></i> </button>
+      </div>
+    </div>
+    <div class="side">
+    <h1>Announcements</h1>
+    <p>Welcome to the SphereSource Public Alpha! The game is in it's early development stage right now! We have a new domain! Also check out the changelog! It's the waffle icon in the bottom of the GUI.<br><br> IF THE GAME STOPS WORKING CORRECTLY, REFRESH THE PAGE! THERE IS A GOOD CHANCE IT IS BEING RESTARTED!
+    </p>
+    <div class="alertButton">
+      <button id="alertClose"><i class="fa fa-times fa-2x" style=" vertical-align: middle;"></i> </button></div>
+    </div>
+    <div class="changelog">
+    <h1>Change-log Version 0.3.7</h1>
+    <p>-Added changelog<br>-Added arrow key support!<br>-Added new chat unread feature.<br>-Added Discord bot to check status of servers.<br>-Improved anti-swear.<br>-New domain! <a href="https://spheresource.tk">Link</a><br>-Added music</p>
+    <div class="changeButton">
+      <button id="changeClose"><i class="fa fa-times fa-2x" style=" vertical-align: middle;"></i></button></div>
+    </div>
+      <canvas id="canvas"></canvas>
+      <div class="showChat">
+      <button id="showChat"><i class="fa fa-comments-o fa-2x" style=" vertical-align: middle;"></i>    Toggle Chat</button><br><p id="unread" style="display:block;"></p></div>
+      <div class="chat">
+        <ul id="messages">
+          <li>Connecting...</li>
+          <li>Connected!</li>
+        </ul>
+        </div>
+      <form id="sendBox" action="">
+      <input id="m" autocomplete="off"/><button>Send</button>
+    </form>
+    <div id="joyDiv" style="width:200px;height:200px;margin-bottom:20px;position:fixed;bottom:0;left: 0;"></div>
+    <div class="version">
+    <h3>V0.3.8</h3></div>
+  <script src="/static/game.js"></script>
+  </body>
+</html>
